@@ -1,7 +1,106 @@
-<!DOCTYPE html>
-<html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento:400" rel="stylesheet" type="text/css">
+    <meta name="theme-color" content="#222">
+    <link rel="shortcut icon" type="image/jpg" href="/ariafavicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amin Shahedi</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Lato:300");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #222;
+}
+
+.gradient-border {
+  --border-width: 1px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  font-family: Lato, sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: white;
+  background: #222;
+  border-radius: 10px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      60deg,
+      hsl(224, 85%, 66%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(359, 85%, 66%),
+      hsl(44, 85%, 66%),
+      hsl(89, 85%, 66%),
+      hsl(134, 85%, 66%),
+      hsl(179, 85%, 66%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: 10px;
+    animation: moveGradient 4s alternate infinite;
+  }
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.t{
+
+    font-size: small;
+    bottom: 5px;
+    left: 6px;
+    text-align: center;
+    right: 6px;
+}
+.y{
+
+
+    background-image: linear-gradient(rgb(252, 252, 252), rgb(200, 200, 200));
+    color: transparent;
+    background-clip: text;
+    font-size: 35px;
+    font-weight: 600;
+    margin: 10px;
+}
+.t div{
+    gap: 0;
+    margin-bottom: -15px;
+    cursor: pointer;
+}
+    </style>
+</head>
 <body>
-<h1>Amin Shahedi</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+    <div class="gradient-border">
+        <div onclick="" class="y">amin  shahedi</div>
+        <div class="t">
+            <div onclick="location.href='tel:09337725615';">09337725615</div>
+            <br> 
+            <div onclick="location.href='mailto:rogueok@gmail.com';">rogueok@gmail.com</div>
+        </div>
+    </div>
+
+    <div class="social">
+        
+    </div>
+
+</body></html>
